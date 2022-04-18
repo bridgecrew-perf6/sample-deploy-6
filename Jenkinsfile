@@ -2,8 +2,8 @@ pipeline {
 	agent any
 
 	stages {
-	     stage('copy artifact'){
-		steps{
+	     stage('Copy artifact'){
+		steps {
                   copyArtifacts filter: 'sample', fingerprintArtifacts: true, projectName: 'sample', selector: lastSuccessful()	
 		}
 	    }
