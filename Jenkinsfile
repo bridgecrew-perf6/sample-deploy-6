@@ -5,7 +5,7 @@ pipeline {
   choice choices: ['qa', 'production'], description: 'Select environment for deployment', name: 'DEPLOY_TO'
 
     string(name: 'upstreamJobName',
-          defaultValue: 'main',
+          defaultValue: '',
           description: 'The name of the job the triggering upstream build'
     )
 }
