@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Copy artifact') {
       steps {
-        copyArtifacts filter: 'sample', fingerprintArtifacts: true, projectName: "sample-multibranch/main", selector: lastSuccessful()
+        copyArtifacts filter: 'sample', fingerprintArtifacts: true, projectName: "sample-multibranch/umaima", selector: lastSuccessful()
       }
     }
     stage('Deliver') {
